@@ -8,10 +8,6 @@ namespace Lsp.Exercice01.Classes
 {
     public class Bird
     {
-        public virtual void Fly()
-        {
-            Console.WriteLine("Flying");
-        }
     }
 
 }
