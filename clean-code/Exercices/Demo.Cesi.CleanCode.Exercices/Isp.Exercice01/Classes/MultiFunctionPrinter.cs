@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Isp.Exercice01.Classes
 {
-    public class MultiFunctionPrinter : IMachine
+    public class MultiFunctionPrinter : IPrinter, IScanner, IFax
     {
         public void Print() { Console.WriteLine("Printing..."); }
         public void Scan() { Console.WriteLine("Scanning..."); }

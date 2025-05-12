@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace Isp.Exercice01.Interfaces
 {
-    public interface IMachine
+    public interface IPrinter
     {
         void Print();
-        void Scan();
-        void Fax();
     }
 
+    public interface IScanner
+    {
+        void Scan();
+    }
+
+    public interface IFax
+    {
+        void Fax();
+    }
 }
