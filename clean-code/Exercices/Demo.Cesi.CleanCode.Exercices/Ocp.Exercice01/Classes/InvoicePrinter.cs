@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ocp.Exercice01.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,23 +7,18 @@ using System.Threading.Tasks;
 
 namespace Ocp.Exercice01.Classes
 {
-    public class InvoicePrinter
+    public class PdfInvoicePrinter : IInvoicePrinter
     {
-        public void PrintInvoice(string type)
+        public void Print()
         {
-            if (type == "PDF")
-            {
-                Console.WriteLine("Printing PDF Invoice...");
-            }
-            else if (type == "Excel")
-            {
-                Console.WriteLine("Printing Excel Invoice...");
-            }
-            else
-            {
-                Console.WriteLine("Unknown invoice type");
-            }
+            Console.WriteLine("Printing PDF Invoice...");
         }
     }
-
+    public class ExcelInvoicePrinter : IInvoicePrinter
+    {
+        public void Print()
+        {
+            Console.WriteLine("Printing Excel Invoice...");
+        }
+    }
 }
