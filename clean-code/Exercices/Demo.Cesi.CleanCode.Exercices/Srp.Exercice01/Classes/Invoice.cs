@@ -10,18 +10,27 @@ namespace Srp.Exercice01.Classes
     {
         public int Id { get; set; }
         public double Amount { get; set; }
+    }
 
-        public void SaveToFile()
+    public class InvoiceCalculator
+    {
+        public double CalculateTotalWithTaxes(Invoice invoice)
+        {
+            return invoice.Amount * 1.2;
+        }
+    }
+
+    public class InvoiceSaver
+    {
+        public void SaveToFile(Invoice invoice)
         {
             // Code pour sauvegarder dans un fichier
         }
+    }
 
-        public double CalculateTotalWithTaxes()
-        {
-            return Amount * 1.2;
-        }
-
-        public void PrintInvoice()
+    public class InvoicePrinter
+    {
+        public void PrintInvoice(Invoice invoice)
         {
             // Code pour imprimer l'Invoice
         }
