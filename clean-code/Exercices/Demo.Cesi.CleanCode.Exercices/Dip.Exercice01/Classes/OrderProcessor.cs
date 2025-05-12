@@ -1,13 +1,20 @@
-﻿namespace Dip.Exercice01.Classes
+﻿using Dip.Exercice01.Interfaces;
+
+namespace Dip.Exercice01.Classes
 {
     public class OrderProcessor
     {
-        private EmailService _emailService = new EmailService();
+        private readonly INotificationService _notificationService;
+
+        public OrderProcessor(INotificationService notificationService)
+        {
+            _notificationService = notificationService;
+        }
 
         public void Process()
         {
             // Traitement de la commande...
-            _emailService.SendEmail("Commande traitée.");
+            _notificationService.Send("Commande traitée.");
         }
     }
 
